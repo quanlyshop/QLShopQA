@@ -41,7 +41,7 @@ namespace QLShopQA.Model
 
         public bool AddData(NhanVienObj nvobj)
         {
-            cmd.CommandText = "Insert into tb_NhanVien values ('"+nvobj.MaNhanVien+"','"+ nvobj.TenNhanVien + "','" + nvobj.Gioitinh + "',CONVERT(DATE,'" + nvobj.Namsinh.ToShortDateString() + "',103),'" + nvobj.Diachi + "','" + nvobj.SDT + "','" + nvobj.Matkhau+ "')";
+            cmd.CommandText = "Insert into tb_NhanVien values ('"+nvobj.MaNhanVien+"','"+ nvobj.TenNhanVien + "','" + nvobj.Gioitinh + "',CONVERT(DATE,'" + nvobj.Namsinh + "',103),'" + nvobj.Diachi + "','" + nvobj.SDT + "','" + nvobj.Matkhau+ "')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -49,6 +49,7 @@ namespace QLShopQA.Model
                 con.OpenConn();
                 cmd.ExecuteNonQuery();
                 con.CloseConn();
+                return true;
             }
             catch (Exception ex)
             {
@@ -62,7 +63,7 @@ namespace QLShopQA.Model
 
         public bool UpdateData(NhanVienObj nvobj)
         {
-            cmd.CommandText = "Update tb_NhanVien set TenNhanVien='" + nvobj.TenNhanVien + "',set GioiTinh='" + nvobj.Gioitinh + "',NamSinh = CONVERT(DATE,'" + nvobj.Namsinh.ToShortDateString() + "',103),DiaChi = '" + nvobj.Diachi + "',SDT = '" + nvobj.SDT + "',MatKhau = '" + nvobj.Matkhau + "' where MaNV='"+nvobj.MaNhanVien+"'";
+            cmd.CommandText = "Update tb_NhanVien set TenNhanVien='" + nvobj.TenNhanVien + "',set GioiTinh='" + nvobj.Gioitinh + "',NamSinh = CONVERT(DATE,'" + nvobj.Namsinh + "',103),DiaChi = '" + nvobj.Diachi + "',SDT = '" + nvobj.SDT + "',MatKhau = '" + nvobj.Matkhau + "' where MaNV='"+nvobj.MaNhanVien+"'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -70,6 +71,7 @@ namespace QLShopQA.Model
                 con.OpenConn();
                 cmd.ExecuteNonQuery();
                 con.CloseConn();
+                return true;
             }
             catch (Exception ex)
             {
@@ -91,6 +93,7 @@ namespace QLShopQA.Model
                 con.OpenConn();
                 cmd.ExecuteNonQuery();
                 con.CloseConn();
+                return true;
             }
             catch (Exception ex)
             {

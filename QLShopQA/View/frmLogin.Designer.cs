@@ -34,7 +34,6 @@
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.ckbShowPassword = new System.Windows.Forms.CheckBox();
             this.lblIncorrect = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -94,18 +93,6 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(313, 365);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(140, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Remember me";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
             // ckbShowPassword
             // 
             this.ckbShowPassword.AutoSize = true;
@@ -122,7 +109,7 @@
             // lblIncorrect
             // 
             this.lblIncorrect.AutoSize = true;
-            this.lblIncorrect.Location = new System.Drawing.Point(168, 443);
+            this.lblIncorrect.Location = new System.Drawing.Point(144, 361);
             this.lblIncorrect.Name = "lblIncorrect";
             this.lblIncorrect.Size = new System.Drawing.Size(0, 32);
             this.lblIncorrect.TabIndex = 5;
@@ -137,7 +124,6 @@
             this.ClientSize = new System.Drawing.Size(578, 444);
             this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.ckbShowPassword);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtAccount);
             this.Controls.Add(this.lblPassword);
@@ -164,7 +150,6 @@
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox ckbShowPassword;
         private System.Windows.Forms.Label lblIncorrect;
     }
