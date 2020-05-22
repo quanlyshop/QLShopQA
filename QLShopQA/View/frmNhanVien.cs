@@ -39,10 +39,21 @@ namespace QLShopQA.View
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("select * from NhanVien", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);            
             DataTable dtNhanVien = new DataTable();
-            dtNhanVien = nvctr.getData();
+            da.Fill(dtNhanVien);
             dgvDanhSachNV.DataSource = dtNhanVien;
+            //int i = 0;
+            //foreach (DataRow dr in dtNhanVien.Rows)
+            //{
+            //    listView1.Items.Add(dr["MaNV"].ToString());
+            //    listView1.Items[i].SubItems.Add(dr["TenNhanVien"].ToString());
+            //    i++;
+            //}
+            //dtNhanVien = nvctr.getData();
+            //dgvDanhSachNV.DataSource = dtNhanVien;
             //bingding();
             
         }
@@ -71,6 +82,11 @@ namespace QLShopQA.View
         private void dgvDanhSachNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
           
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
