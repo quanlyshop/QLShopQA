@@ -13,6 +13,7 @@ namespace QLShopQA.View
 {
     public partial class frmLogin : Form
     {
+        frmNhanVien frm;
         string strcConnection = @"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True";
         SqlConnection conn;
         SqlCommand command;
@@ -35,13 +36,18 @@ namespace QLShopQA.View
             int x = (int)command.ExecuteScalar();
             if (x == 1)
             {
-                MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
-
+                //MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
+                this.Hide();
+                frm = new frmNhanVien();
+                frm.Show();
             }
             else
             {
-                MessageBox.Show("\tĐăng nhập thất bại\nSai mặt khẩu hoặc tên đăng nhập", "Faile");
-
+                //MessageBox.Show("\tĐăng nhập thất bại\nSai mặt khẩu hoặc tên đăng nhập", "Faile");
+                lblIncorrect.Text = "Bạn đã nhập sai tên đăng nhập hoặc mặc khẩu";
+                txtAccount.Text = "";
+                txtPassword.Text = "";
+                txtAccount.Focus();
             }
         }
         

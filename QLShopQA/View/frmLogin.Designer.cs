@@ -43,7 +43,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.DeepPink;
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogin.Location = new System.Drawing.Point(308, 292);
+            this.btnLogin.Location = new System.Drawing.Point(240, 297);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 51);
             this.btnLogin.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccount.Location = new System.Drawing.Point(136, 96);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(317, 35);
+            this.txtAccount.Size = new System.Drawing.Size(249, 35);
             this.txtAccount.TabIndex = 3;
             // 
             // lblPassword
@@ -89,7 +89,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(136, 210);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(317, 35);
+            this.txtPassword.Size = new System.Drawing.Size(249, 35);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -98,7 +98,7 @@
             this.ckbShowPassword.AutoSize = true;
             this.ckbShowPassword.BackColor = System.Drawing.Color.Transparent;
             this.ckbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowPassword.Location = new System.Drawing.Point(136, 280);
+            this.ckbShowPassword.Location = new System.Drawing.Point(136, 267);
             this.ckbShowPassword.Name = "ckbShowPassword";
             this.ckbShowPassword.Size = new System.Drawing.Size(148, 24);
             this.ckbShowPassword.TabIndex = 4;
@@ -109,9 +109,12 @@
             // lblIncorrect
             // 
             this.lblIncorrect.AutoSize = true;
-            this.lblIncorrect.Location = new System.Drawing.Point(144, 361);
+            this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrect.Location = new System.Drawing.Point(139, 353);
             this.lblIncorrect.Name = "lblIncorrect";
-            this.lblIncorrect.Size = new System.Drawing.Size(0, 32);
+            this.lblIncorrect.Size = new System.Drawing.Size(0, 20);
             this.lblIncorrect.TabIndex = 5;
             // 
             // frmLogin
