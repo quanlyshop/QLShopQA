@@ -13,7 +13,7 @@ namespace QLShopQA.View
 {
     public partial class frmLogin : Form
     {
-        frmNhanVien frm;
+        //frmNhanVien frm;
         string strcConnection = @"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True";
         SqlConnection conn;
         SqlCommand command;
@@ -36,10 +36,10 @@ namespace QLShopQA.View
             int x = (int)command.ExecuteScalar();
             if (x == 1)
             {
-                //MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
-                this.Hide();
-                frm = new frmNhanVien();
-                frm.Show();
+                MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
+                //this.Hide();
+                //frm = new frmNhanVien();
+                //frm.Show();
             }
             else
             {

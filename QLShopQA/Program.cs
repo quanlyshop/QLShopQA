@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLShopQA.View;
-using QLShopQA.Model;
+using QLShopQA.Model; 
 
 namespace QLShopQA
 {
