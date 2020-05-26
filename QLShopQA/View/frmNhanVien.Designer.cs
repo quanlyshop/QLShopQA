@@ -83,6 +83,9 @@
             // cmbgioitinh
             // 
             this.cmbgioitinh.FormattingEnabled = true;
+            this.cmbgioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cmbgioitinh.Location = new System.Drawing.Point(209, 101);
             this.cmbgioitinh.Name = "cmbgioitinh";
             this.cmbgioitinh.Size = new System.Drawing.Size(170, 35);
