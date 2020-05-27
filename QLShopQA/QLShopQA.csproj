@@ -63,6 +63,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmquanlykho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmquanlykho.Designer.cs">
+      <DependentUpon>frmquanlykho.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
