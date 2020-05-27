@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonGalleryBarItem3 = new DevExpress.XtraBars.RibbonGalleryBarItem();
@@ -42,6 +40,8 @@
             this.ribbonGalleryBarItem7 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,20 +78,8 @@
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Size = new System.Drawing.Size(800, 72);
+            this.ribbonControl1.Size = new System.Drawing.Size(1590, 72);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 386);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(800, 41);
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // ribbonGalleryBarItem1
             // 
@@ -147,6 +135,18 @@
             // 
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 608);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1590, 41);
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // label1
             // 
@@ -247,7 +247,7 @@
             this.button1.Location = new System.Drawing.Point(229, 343);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(1);
-            this.button1.Size = new System.Drawing.Size(81, 37);
+            this.button1.Size = new System.Drawing.Size(112, 47);
             this.button1.TabIndex = 5;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
@@ -256,10 +256,10 @@
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(404, 343);
+            this.button2.Location = new System.Drawing.Point(399, 343);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(1);
-            this.button2.Size = new System.Drawing.Size(81, 37);
+            this.button2.Size = new System.Drawing.Size(112, 47);
             this.button2.TabIndex = 5;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
@@ -271,7 +271,7 @@
             this.button3.Location = new System.Drawing.Point(566, 343);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(1);
-            this.button3.Size = new System.Drawing.Size(81, 37);
+            this.button3.Size = new System.Drawing.Size(112, 47);
             this.button3.TabIndex = 5;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 427);
+            this.ClientSize = new System.Drawing.Size(1590, 649);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
