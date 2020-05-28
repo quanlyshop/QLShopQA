@@ -29,6 +29,7 @@ namespace QLShopQA.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+          
             conn = new SqlConnection(strcConnection);
             conn.Open();
             string sql= "Select Count(*) from account where usename = '" + txtAccount.Text + "' and pass = '" + txtPassword.Text + "'";
@@ -37,9 +38,10 @@ namespace QLShopQA.View
             if (x == 1)
             {
                 //MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
+                frmTrangChu f = new frmTrangChu();
                 this.Hide();
-                frm = new frmNhanVien();
-                frm.Show();
+                f.ShowDialog();//Đợi cho showdialog tắt đi mới chạy tiếp
+                this.Show();
             }
             else
             {
@@ -49,6 +51,11 @@ namespace QLShopQA.View
                 txtPassword.Text = "";
                 txtAccount.Focus();
             }
+            //frmTrangChu f = new frmTrangChu();
+            //this.Hide();
+            //f.ShowDialog();//Đợi cho showdialog tắt đi mới chạy tiếp
+            //this.Show();
+
         }
         
 
@@ -61,6 +68,24 @@ namespace QLShopQA.View
             else
             {
                 txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn thoát chương trình ?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
             }
         }
     }

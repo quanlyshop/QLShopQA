@@ -29,24 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            this.lblIncorrect = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblAccount = new System.Windows.Forms.Label();
-            this.txtAccount = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.txtAccount = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.ckbShowPassword = new System.Windows.Forms.CheckBox();
-            this.lblIncorrect = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // lblIncorrect
+            // 
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrect.Location = new System.Drawing.Point(237, 238);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(0, 20);
+            this.lblIncorrect.TabIndex = 5;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DeepPink;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogin.Location = new System.Drawing.Point(240, 297);
+            this.btnLogin.Location = new System.Drawing.Point(294, 188);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 51);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "SIGN IN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -57,20 +70,11 @@
             this.lblAccount.BackColor = System.Drawing.Color.Transparent;
             this.lblAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAccount.Location = new System.Drawing.Point(131, 54);
+            this.lblAccount.Location = new System.Drawing.Point(106, 48);
             this.lblAccount.Name = "lblAccount";
             this.lblAccount.Size = new System.Drawing.Size(118, 25);
             this.lblAccount.TabIndex = 2;
             this.lblAccount.Text = "USENAME";
-            // 
-            // txtAccount
-            // 
-            this.txtAccount.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccount.Location = new System.Drawing.Point(136, 96);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(249, 35);
-            this.txtAccount.TabIndex = 3;
             // 
             // lblPassword
             // 
@@ -78,27 +82,37 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPassword.Location = new System.Drawing.Point(131, 163);
+            this.lblPassword.Location = new System.Drawing.Point(106, 121);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(138, 25);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "PASSWORD";
             // 
+            // txtAccount
+            // 
+            this.txtAccount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccount.Location = new System.Drawing.Point(241, 42);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(349, 35);
+            this.txtAccount.TabIndex = 1;
+            // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(136, 210);
+            this.txtPassword.Location = new System.Drawing.Point(241, 115);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(249, 35);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Size = new System.Drawing.Size(349, 35);
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // ckbShowPassword
             // 
             this.ckbShowPassword.AutoSize = true;
             this.ckbShowPassword.BackColor = System.Drawing.Color.Transparent;
             this.ckbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowPassword.Location = new System.Drawing.Point(136, 267);
+            this.ckbShowPassword.Location = new System.Drawing.Point(104, 188);
             this.ckbShowPassword.Name = "ckbShowPassword";
             this.ckbShowPassword.Size = new System.Drawing.Size(148, 24);
             this.ckbShowPassword.TabIndex = 4;
@@ -106,16 +120,18 @@
             this.ckbShowPassword.UseVisualStyleBackColor = false;
             this.ckbShowPassword.CheckedChanged += new System.EventHandler(this.ckbShowPassword_CheckedChanged);
             // 
-            // lblIncorrect
+            // btnExit
             // 
-            this.lblIncorrect.AutoSize = true;
-            this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
-            this.lblIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(139, 353);
-            this.lblIncorrect.Name = "lblIncorrect";
-            this.lblIncorrect.Size = new System.Drawing.Size(0, 20);
-            this.lblIncorrect.TabIndex = 5;
+            this.btnExit.BackColor = System.Drawing.Color.DeepPink;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.Location = new System.Drawing.Point(445, 188);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(145, 51);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Cancel";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 
@@ -124,7 +140,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(578, 444);
+            this.ClientSize = new System.Drawing.Size(697, 294);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.ckbShowPassword);
             this.Controls.Add(this.txtPassword);
@@ -139,7 +156,9 @@
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,13 +166,13 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Label lblIncorrect;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblAccount;
-        private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox ckbShowPassword;
-        private System.Windows.Forms.Label lblIncorrect;
+        private System.Windows.Forms.Button btnExit;
     }
 }

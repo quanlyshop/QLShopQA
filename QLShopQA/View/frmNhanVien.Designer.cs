@@ -80,7 +80,8 @@
             this.cmbgioitinh.FormattingEnabled = true;
             this.cmbgioitinh.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Khác"});
             this.cmbgioitinh.Location = new System.Drawing.Point(1103, 55);
             this.cmbgioitinh.Name = "cmbgioitinh";
             this.cmbgioitinh.Size = new System.Drawing.Size(97, 35);
@@ -208,7 +209,7 @@
             this.groupBox2.Controls.Add(this.dgvDanhSachNV);
             this.groupBox2.Location = new System.Drawing.Point(12, 287);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1317, 195);
+            this.groupBox2.Size = new System.Drawing.Size(1259, 295);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách nhân viên";
@@ -221,7 +222,7 @@
             this.dgvDanhSachNV.Location = new System.Drawing.Point(3, 31);
             this.dgvDanhSachNV.Name = "dgvDanhSachNV";
             this.dgvDanhSachNV.RowTemplate.Height = 28;
-            this.dgvDanhSachNV.Size = new System.Drawing.Size(1311, 161);
+            this.dgvDanhSachNV.Size = new System.Drawing.Size(1253, 261);
             this.dgvDanhSachNV.TabIndex = 0;
             this.dgvDanhSachNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachNV_CellContentClick);
             // 

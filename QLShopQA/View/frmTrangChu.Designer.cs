@@ -67,7 +67,7 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3});
-            this.ribbon.Size = new System.Drawing.Size(1033, 206);
+            this.ribbon.Size = new System.Drawing.Size(934, 206);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
@@ -151,7 +151,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 479);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1033, 41);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(934, 41);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 520);
+            this.ClientSize = new System.Drawing.Size(934, 520);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;

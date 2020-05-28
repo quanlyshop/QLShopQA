@@ -110,7 +110,8 @@ namespace QLShopQA.View
         void loadcontrol()
         {
             cmbgioitinh.Items.Add("Nam");
-            cmbgioitinh.Items.Add("Nu");
+            cmbgioitinh.Items.Add("Nữ");
+            cmbgioitinh.Items.Add("Khác");
             dtnamsinh.Text = DateTime.Now.Date.ToShortDateString();
             
         }
