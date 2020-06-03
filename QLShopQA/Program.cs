@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLShopQA.View;
-using QLShopQA.Model; 
-
+using QLShopQA.Model;
+using System.Data.SqlClient;
 namespace QLShopQA
 {
     static class Program
@@ -18,8 +18,7 @@ namespace QLShopQA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-            
+            Application.Run(new frmNhanVien());
         }
     }
 }

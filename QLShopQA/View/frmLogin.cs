@@ -13,7 +13,7 @@ namespace QLShopQA.View
 {
     public partial class frmLogin : Form
     {
-        frmNhanVien frm;
+        //frmNhanVien frm;
         string strcConnection = @"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True";
         SqlConnection conn;
         SqlCommand command;

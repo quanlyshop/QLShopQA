@@ -37,6 +37,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.ckbShowPassword = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.SuspendLayout();
             // 
             // lblIncorrect
@@ -53,6 +54,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DeepPink;
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -112,7 +114,7 @@
             this.ckbShowPassword.AutoSize = true;
             this.ckbShowPassword.BackColor = System.Drawing.Color.Transparent;
             this.ckbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowPassword.Location = new System.Drawing.Point(104, 188);
+            this.ckbShowPassword.Location = new System.Drawing.Point(241, 158);
             this.ckbShowPassword.Name = "ckbShowPassword";
             this.ckbShowPassword.Size = new System.Drawing.Size(148, 24);
             this.ckbShowPassword.TabIndex = 4;
@@ -123,6 +125,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.DeepPink;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExit.Location = new System.Drawing.Point(445, 188);
@@ -133,14 +136,27 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // hyperlinkLabelControl1
+            // 
+            this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(111, 210);
+            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
+            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(73, 24);
+            this.hyperlinkLabelControl1.TabIndex = 6;
+            this.hyperlinkLabelControl1.Text = "Đăng ký";
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(697, 294);
+            this.Controls.Add(this.hyperlinkLabelControl1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.ckbShowPassword);
@@ -170,9 +186,10 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblAccount;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtAccount;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox ckbShowPassword;
         private System.Windows.Forms.Button btnExit;
+        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        public System.Windows.Forms.TextBox txtAccount;
+        public System.Windows.Forms.TextBox txtPassword;
     }
 }

@@ -12,7 +12,6 @@ using QLShopQA.Model;
 using System.Data.SqlClient;
 using QLShopQA.Object;
 
-
 namespace QLShopQA.View
 {
     public partial class frmNhanVien : Form
@@ -55,7 +54,7 @@ namespace QLShopQA.View
             //    listView1.Items[i].SubItems.Add(dr["TenNhanVien"].ToString());
             //    i++;
             //}
-            //dtNhanVien = nvctr.getData();
+            dtNhanVien = nvctr.getData();
             //dgvDanhSachNV.DataSource = dtNhanVien;
             //bingding();
 
@@ -63,7 +62,7 @@ namespace QLShopQA.View
         void bingding()
         {   
             txtma.DataBindings.Clear();
-            txtma.DataBindings.Add("Text", dgvDanhSachNV.DataSource, "MaNV");
+            txtma.DataBindings.Add("Text", dgvDanhSachNV.DataSource, "Manv");
 
             txtten.DataBindings.Clear();
             txtten.DataBindings.Add("Text", dgvDanhSachNV.DataSource, "TenNhanVien");
@@ -94,9 +93,8 @@ namespace QLShopQA.View
             btnThem.Enabled = !e;
             btnSua.Enabled = !e;
             btnXoa.Enabled = !e;
-        
         }
-        void ganDuLieu(NhanVienObj nvObj)
+        void ganDuLieu(NhanVienObj nvObj)//hàm lưu dữ liệu
         {
             nvObj.MaNhanVien = txtma.Text.Trim();
             nvObj.TenNhanVien = txtten.Text.Trim();
@@ -112,8 +110,6 @@ namespace QLShopQA.View
             cmbgioitinh.Items.Add("Nam");
             cmbgioitinh.Items.Add("Nữ");
             cmbgioitinh.Items.Add("Khác");
-            dtnamsinh.Text = DateTime.Now.Date.ToShortDateString();
-            
         }
         private void dgvDanhSachNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -127,31 +123,32 @@ namespace QLShopQA.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
             flag = 0;
-
             dis_en(true);
             loadcontrol();
+            dtnamsinh.Text = DateTime.Now.Date.ToShortDateString();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
             dis_en(true);
+            loadcontrol();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure ?", " xac nhan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 if (nvctr.delData(txtma.Text.Trim()))
-                    MessageBox.Show("Xoa thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else 
-                    MessageBox.Show("Xoa that bai", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 return;
+            frmNhanVien_Load(sender, e);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -160,17 +157,19 @@ namespace QLShopQA.View
             if (flag == 0)
             {
                 if (nvctr.addData(nvObj))
-                    MessageBox.Show("Them thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Them that bai", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Thêm thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (nvctr.updData(nvObj))
-                    MessageBox.Show("Sua thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Sua that bai", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sửa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            frmNhanVien_Load(sender, e);//lưu xong load lại
+            dis_en(false);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

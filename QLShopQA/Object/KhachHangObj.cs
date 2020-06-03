@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace QLShopQA.Object
 {
-    class NhanVienObj
+    class KhachHangObj
     {
-        string ma, ten, gioitinh, diachi, sdt, matkhau;
+        string ma, ten, gioitinh, diachi, sdt,  email;
         string namsinh;
+        int diem;
 
         public string Namsinh { get => namsinh; set => namsinh = value; }
         public string MaNhanVien { get => ma; set => ma = value; }
@@ -17,9 +18,11 @@ namespace QLShopQA.Object
         public string Gioitinh { get => gioitinh; set => gioitinh = value; }
         public string Diachi { get => diachi; set => diachi = value; }
         public string SDT { get => sdt; set => sdt = value; }
-        public string Matkhau { get => matkhau; set => matkhau = value; }
-        public NhanVienObj() { }//thông báo cần chót tơ rỗng
-        public NhanVienObj(string ma, string ten, string gioitinh, string namsinh,string diachi,string sdt,string matkhau)
+        public string Email { get => email; set => email = value; }
+        public int Diem { get => diem; set => diem = value; }
+
+        public KhachHangObj() { }
+        public KhachHangObj(string ma, string ten, string gioitinh, string namsinh, string diachi, string sdt, string email,int diem)
         {
             this.ma = ma;
             this.ten = ten;
@@ -27,7 +30,8 @@ namespace QLShopQA.Object
             this.namsinh = namsinh;
             this.diachi = diachi;
             this.sdt = sdt;
-            this.matkhau = matkhau;
+            this.email = email;
+            this.diem = diem;
         }
     }
 }

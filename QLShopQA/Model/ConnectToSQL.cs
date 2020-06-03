@@ -23,7 +23,6 @@ namespace QLShopQA.Model
         {
             get { return error; }
             set { error = value; }
-
         }
         string StrCon;
         #endregion
@@ -66,7 +65,27 @@ namespace QLShopQA.Model
             return true;
         }
         #endregion
-
+        public DataTable getThongTin()
+        {
+            DataTable dt = new DataTable();
+            SqlCommand Cmd = new SqlCommand();
+            Cmd = new SqlCommand();
+            Cmd.CommandType = CommandType.Text;
+            Cmd.CommandText = "select *from ThongTin";
+            Cmd.Connection = Conn;
+            try
+            {
+                OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(Cmd);
+                sda.Fill(dt);
+                CloseConn();
+            }
+            catch(Exception ex)
+            {
+                error = ex.Message;
+            }
+            return dt;
+        }
 
     }
 }

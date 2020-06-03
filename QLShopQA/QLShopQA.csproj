@@ -52,8 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\NhanVienCtrl.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="Model\ConnectToSQL.cs" />
+    <Compile Include="Model\KhachHangMod.cs" />
     <Compile Include="Model\NhanVienMod.cs" />
+    <Compile Include="Object\KhachHangObj.cs" />
     <Compile Include="Object\NhanVienObj.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -63,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmquanlykho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +96,12 @@
     <Compile Include="View\frmQuanLyHoaDon.Designer.cs">
       <DependentUpon>frmQuanLyHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmquanlykho.resx">
       <DependentUpon>frmquanlykho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>

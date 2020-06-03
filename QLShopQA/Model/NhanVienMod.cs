@@ -24,15 +24,16 @@ namespace QLShopQA.Model
             cmd.Connection = con.Connection;
             try
             {
-                con.OpenConn();
+                con.OpenConn();//Mở kết nối
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                sda.Fill(dt);
+                sda.Fill(dt);//lấy dữ liệu
                 con.CloseConn();
             }
             catch(Exception ex)
             {
+                //Nếu xảy ra lỗi
                 string mex = ex.Message;
-                cmd.Dispose();//cmd trong phien lam viec nen xoa bo no di
+                cmd.Dispose();//cmd còn ở trong phien lam viec nen xoa bo no di
 
                 con.CloseConn();
             }
@@ -41,13 +42,13 @@ namespace QLShopQA.Model
 
         public bool AddData(NhanVienObj nvobj)
         {
-            cmd.CommandText = "Insert into tb_NhanVien values ('"+nvobj.MaNhanVien+"','"+ nvobj.TenNhanVien + "','" + nvobj.Gioitinh + "',CONVERT(DATE,'" + nvobj.Namsinh + "',103),'" + nvobj.Diachi + "','" + nvobj.SDT + "','" + nvobj.Matkhau+ "')";
+            cmd.CommandText = "Insert into tb_NhanVien values ('" + nvobj.MaNhanVien + "', N'" + nvobj.TenNhanVien + "', N'" + nvobj.Gioitinh + "',CONVERT(DATE,'" + nvobj.Namsinh + "',103), N'" + nvobj.Diachi + "','" + nvobj.SDT + "','" + nvobj.Matkhau+ "')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
             {
                 con.OpenConn();
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();  
                 con.CloseConn();
                 return true;
             }
@@ -61,9 +62,9 @@ namespace QLShopQA.Model
             return false;
         }
 
-        public bool UpdateData(NhanVienObj nvobj)
+        public bool UpdData(NhanVienObj nvobj)
         {
-            cmd.CommandText = "Update tb_NhanVien set TenNhanVien='" + nvobj.TenNhanVien + "',set GioiTinh='" + nvobj.Gioitinh + "',NamSinh = CONVERT(DATE,'" + nvobj.Namsinh + "',103),DiaChi = '" + nvobj.Diachi + "',SDT = '" + nvobj.SDT + "',MatKhau = '" + nvobj.Matkhau + "' where MaNV='"+nvobj.MaNhanVien+"'";
+            cmd.CommandText = "Update tb_NhanVien set TenNhanVien= N'" + nvobj.TenNhanVien + "', GioiTinh= N'" + nvobj.Gioitinh + "',NamSinh = CONVERT(DATE,'" + nvobj.Namsinh + "',103), DiaChi = N'" + nvobj.Diachi + "',SDT = '" + nvobj.SDT + "',MatKhau = '" + nvobj.Matkhau + "' where MaNV='"+nvobj.MaNhanVien+"'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -99,7 +100,6 @@ namespace QLShopQA.Model
             {
                 string mex = ex.Message;
                 cmd.Dispose();//cmd trong phien lam viec nen xoa bo no di
-
                 con.CloseConn();
             }
             return false;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using QLShopQA.Model;
 using QLShopQA.Object;
+
 namespace QLShopQA.Control
 {
     class NhanVienCtrl
@@ -22,7 +23,7 @@ namespace QLShopQA.Control
         }
         public bool updData(NhanVienObj nvobj)
         {
-            return nvMod.UpdateData(nvobj);
+            return nvMod.UpdData(nvobj);
         }
         public bool delData(string ma)
         {
