@@ -107,9 +107,19 @@ namespace QLShopQA.View
         }
         void loadcontrol()
         {
+            cmbgioitinh.Items.Clear();
             cmbgioitinh.Items.Add("Nam");
             cmbgioitinh.Items.Add("Nữ");
             cmbgioitinh.Items.Add("Khác");
+        }
+        void cleardata()
+        {
+            txtma.Text = "";
+            txtten.Text = "";
+            dtnamsinh.Text = DateTime.Now.Date.ToShortDateString();
+            loadcontrol();
+            txtdiachi.Text = "";
+            txtSDT.Text = "";
         }
         private void dgvDanhSachNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
