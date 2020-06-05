@@ -103,7 +103,7 @@ namespace QLShopQA.View
         private void btnXoa_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
+            command.CommandText = "DELETE from KhachHang where MaKH='" + txtma.Text + "'";
             command.ExecuteNonQuery();
             loaddata();
             //DialogResult dr = XtraMessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
