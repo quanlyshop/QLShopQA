@@ -12,10 +12,10 @@ namespace QLShopQA.Control
     class NhanVienCtrl
     {
         NhanVienMod nvMod = new NhanVienMod();
-        public DataTable getData()
-        {
-            return nvMod.GetData();
-        }
+        //public DataTable getData()
+        //{
+        //    return nvMod.GetData();
+        //}
 
         public bool addData(NhanVienObj nvobj)
         {

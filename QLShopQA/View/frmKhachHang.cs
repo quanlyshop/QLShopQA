@@ -82,6 +82,7 @@ namespace QLShopQA.View
             command = connection.CreateCommand();
             command.CommandText = "INSERT into KhachHang values('" + txtma.Text + "', N'" + txtten.Text + "', '" + txtSDT.Text + "', N'" + cmbgioitinh.Text + "', N'" + txtdiachi.Text + "','" + txtdiem.Text + "','" + dtnamsinh.Text + "','"+ txtEmail.Text +"')";
             command.ExecuteNonQuery();
+            XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             loaddata();
         }
 
@@ -102,9 +103,21 @@ namespace QLShopQA.View
         private void btnXoa_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "DELETE from KhachHang where MaKH='" + txtma.Text + "'";
+            command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
             command.ExecuteNonQuery();
             loaddata();
+            //DialogResult dr = XtraMessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dr == DialogResult.Yes)
+            //{
+            //command = connection.CreateCommand();
+            //command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
+            //command.ExecuteNonQuery();
+            //loaddata();
+            XtraMessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //    return;
+            //frmKhachHang_Load(sender, e);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -112,6 +125,7 @@ namespace QLShopQA.View
             command = connection.CreateCommand();
             command.CommandText = "UPDATE KhachHang set TenKH = N'"+txtten.Text+"',SDT ='"+txtSDT.Text+"',GioiTinh = N'"+cmbgioitinh.Text+"',DiaChi = N'"+txtdiachi.Text+"',SoDiem = '"+txtdiem.Text+"',NamSinh = CONVERT(DATE,'" + dtnamsinh.Text + "',103),Email='" + txtEmail.Text+"' where MaKH= '"+txtma.Text+"'";
             command.ExecuteNonQuery();
+            XtraMessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             loaddata();
         }
 
@@ -125,6 +139,30 @@ namespace QLShopQA.View
             txtdiem.Text = "";
             dtnamsinh.Text = "1/1/1999";
             txtEmail.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //string sqlTimKiem = "slect *form KhachHang where MaKH= @ma.Text";
+            //SqlCommand cmd = new SqlCommand(sqlTimKiem, connection);
+            //cmd.Parameters.AddWithValue("MaKH", txtMaCanTim.Text);
+            //cmd.Parameters.AddWithValue("TenKH", txtten.Text);
+            //cmd.Parameters.AddWithValue("SDT", txtSDT.Text);
+            //cmd.Parameters.AddWithValue("GioiTinh", cmbgioitinh.Text);
+            //cmd.Parameters.AddWithValue("DiaChi", txtdiachi.Text);
+            //cmd.Parameters.AddWithValue("SoDiem", txtdiem.Text);
+            //cmd.Parameters.AddWithValue("NamSinh", dtnamsinh.Text);
+            //cmd.Parameters.AddWithValue("Email", txtEmail.Text);
+            //cmd.ExecuteNonQuery();
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //DataTable dt = new DataTable();
+            //dt.Load(dr);
+            //dgvDanhSachKH.DataSource = dt;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
