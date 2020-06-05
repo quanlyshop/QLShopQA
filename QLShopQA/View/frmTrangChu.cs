@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 
 namespace QLShopQA.View
 {
@@ -88,7 +89,7 @@ namespace QLShopQA.View
 
         private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //if (MessageBox.Show("Bạn có muốn đăng xuất !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly))
+            //if (MessageBox.Show("Bạn có muốn đăng xuất !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
             //{
             //    DisEndMenuLogin(true, idLogin);
             //    btnDangNhap_ItemClick(sender, e);

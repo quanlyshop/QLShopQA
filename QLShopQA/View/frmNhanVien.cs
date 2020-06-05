@@ -11,6 +11,7 @@ using QLShopQA.Control;
 using QLShopQA.Model;
 using System.Data.SqlClient;
 using QLShopQA.Object;
+using DevExpress.XtraEditors;
 
 namespace QLShopQA.View
 {
@@ -121,9 +122,17 @@ namespace QLShopQA.View
             txtdiachi.Text = "";
             txtSDT.Text = "";
         }
+        //thêm xóa sửa
         private void dgvDanhSachNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+            //int i;
+            //i = dgvDanhSachNV.CurrentRow.Index;
+            //txtma.Text = dgvDanhSachNV.Rows[i].Cells[0].Value.ToString();
+            //txtten.Text = dgvDanhSachNV.Rows[i].Cells[1].Value.ToString();
+            //dtnamsinh.Text = dgvDanhSachNV.Rows[i].Cells[2].Value.ToString();
+            //cmbgioitinh.Text = dgvDanhSachNV.Rows[i].Cells[3].Value.ToString();
+            //txtdiachi.Text = dgvDanhSachNV.Rows[i].Cells[4].Value.ToString();
+            //txtSDT.Text = dgvDanhSachNV.Rows[i].Cells[5].Value.ToString();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,13 +157,14 @@ namespace QLShopQA.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = XtraMessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 if (nvctr.delData(txtma.Text.Trim()))
-                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else 
-                    MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                    XtraMessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    XtraMessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 return;
@@ -167,16 +177,16 @@ namespace QLShopQA.View
             if (flag == 0)
             {
                 if (nvctr.addData(nvObj))
-                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Thêm thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Thêm thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (nvctr.updData(nvObj))
-                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Sửa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Sửa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             frmNhanVien_Load(sender, e);//lưu xong load lại
             dis_en(false);

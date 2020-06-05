@@ -174,5 +174,8 @@
   <ItemGroup>
     <None Include="Resources\App-login-manager-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
