@@ -56,6 +56,11 @@
     <Compile Include="Model\ConnectToSQL.cs" />
     <Compile Include="Model\KhachHangMod.cs" />
     <Compile Include="Model\NhanVienMod.cs" />
+    <Compile Include="NhanVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhanVien.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Object\KhachHangObj.cs" />
     <Compile Include="Object\NhanVienObj.cs" />
     <Compile Include="View\Form1.cs">
@@ -143,6 +148,17 @@
     <EmbeddedResource Include="View\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NhanVien.xsc">
+      <DependentUpon>NhanVien.xsd</DependentUpon>
+    </None>
+    <None Include="NhanVien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NhanVien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NhanVien.xss">
+      <DependentUpon>NhanVien.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

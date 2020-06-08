@@ -28,175 +28,222 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbgioitinh = new System.Windows.Forms.ComboBox();
-            this.dtnamsinh = new System.Windows.Forms.DateTimePicker();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtten = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtma = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label maNVLabel;
+            System.Windows.Forms.Label tenNhanVienLabel;
+            System.Windows.Forms.Label gioiTinhLabel;
+            System.Windows.Forms.Label diaChiLabel;
+            System.Windows.Forms.Label sDTLabel;
+            System.Windows.Forms.Label namSinhLabel;
+            this.grThongTin = new System.Windows.Forms.GroupBox();
+            this.maNVSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVien = new QLShopQA.NhanVien();
+            this.tenNhanVienTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.diaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.gioiTinhTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.sDTTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.namSinhDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachNV = new System.Windows.Forms.DataGridView();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namSinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.nhanVienTableAdapter = new QLShopQA.NhanVienTableAdapters.NhanVienTableAdapter();
+            this.tableAdapterManager = new QLShopQA.NhanVienTableAdapters.TableAdapterManager();
+            this.btnLuu = new System.Windows.Forms.Button();
+            maNVLabel = new System.Windows.Forms.Label();
+            tenNhanVienLabel = new System.Windows.Forms.Label();
+            gioiTinhLabel = new System.Windows.Forms.Label();
+            diaChiLabel = new System.Windows.Forms.Label();
+            sDTLabel = new System.Windows.Forms.Label();
+            namSinhLabel = new System.Windows.Forms.Label();
+            this.grThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maNVSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenNhanVienTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gioiTinhTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sDTTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namSinhDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namSinhDateEdit.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachNV)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // maNVLabel
             // 
-            this.groupBox1.Controls.Add(this.cmbgioitinh);
-            this.groupBox1.Controls.Add(this.dtnamsinh);
-            this.groupBox1.Controls.Add(this.txtSDT);
-            this.groupBox1.Controls.Add(this.txtdiachi);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtten);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtma);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 97);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1259, 184);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin nhân viên";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            maNVLabel.AutoSize = true;
+            maNVLabel.Location = new System.Drawing.Point(41, 44);
+            maNVLabel.Name = "maNVLabel";
+            maNVLabel.Size = new System.Drawing.Size(99, 33);
+            maNVLabel.TabIndex = 0;
+            maNVLabel.Text = "Mã NV";
             // 
-            // cmbgioitinh
+            // tenNhanVienLabel
             // 
-            this.cmbgioitinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbgioitinh.Enabled = false;
-            this.cmbgioitinh.FormattingEnabled = true;
-            this.cmbgioitinh.Location = new System.Drawing.Point(1103, 55);
-            this.cmbgioitinh.Name = "cmbgioitinh";
-            this.cmbgioitinh.Size = new System.Drawing.Size(97, 41);
-            this.cmbgioitinh.TabIndex = 5;
-            this.cmbgioitinh.SelectedIndexChanged += new System.EventHandler(this.cmbgioitinh_SelectedIndexChanged);
+            tenNhanVienLabel.AutoSize = true;
+            tenNhanVienLabel.Location = new System.Drawing.Point(365, 42);
+            tenNhanVienLabel.Name = "tenNhanVienLabel";
+            tenNhanVienLabel.Size = new System.Drawing.Size(171, 33);
+            tenNhanVienLabel.TabIndex = 2;
+            tenNhanVienLabel.Text = "Tên nhân viên";
             // 
-            // dtnamsinh
+            // gioiTinhLabel
             // 
-            this.dtnamsinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtnamsinh.Enabled = false;
-            this.dtnamsinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtnamsinh.Location = new System.Drawing.Point(810, 55);
-            this.dtnamsinh.Name = "dtnamsinh";
-            this.dtnamsinh.Size = new System.Drawing.Size(165, 40);
-            this.dtnamsinh.TabIndex = 4;
+            gioiTinhLabel.AutoSize = true;
+            gioiTinhLabel.Location = new System.Drawing.Point(743, 49);
+            gioiTinhLabel.Name = "gioiTinhLabel";
+            gioiTinhLabel.Size = new System.Drawing.Size(116, 33);
+            gioiTinhLabel.TabIndex = 4;
+            gioiTinhLabel.Text = "Giới tính";
             // 
-            // txtSDT
+            // diaChiLabel
             // 
-            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSDT.Enabled = false;
-            this.txtSDT.Location = new System.Drawing.Point(810, 112);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(390, 40);
-            this.txtSDT.TabIndex = 7;
+            diaChiLabel.AutoSize = true;
+            diaChiLabel.Location = new System.Drawing.Point(440, 112);
+            diaChiLabel.Name = "diaChiLabel";
+            diaChiLabel.Size = new System.Drawing.Size(96, 33);
+            diaChiLabel.TabIndex = 6;
+            diaChiLabel.Text = "Địa chỉ";
             // 
-            // txtdiachi
+            // sDTLabel
             // 
-            this.txtdiachi.Enabled = false;
-            this.txtdiachi.Location = new System.Drawing.Point(181, 110);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(449, 40);
-            this.txtdiachi.TabIndex = 6;
+            sDTLabel.AutoSize = true;
+            sDTLabel.Location = new System.Drawing.Point(73, 112);
+            sDTLabel.Name = "sDTLabel";
+            sDTLabel.Size = new System.Drawing.Size(67, 33);
+            sDTLabel.TabIndex = 8;
+            sDTLabel.Text = "SDT";
             // 
-            // label6
+            // namSinhLabel
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(645, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 33);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Số điện thoại";
+            namSinhLabel.AutoSize = true;
+            namSinhLabel.Location = new System.Drawing.Point(743, 110);
+            namSinhLabel.Name = "namSinhLabel";
+            namSinhLabel.Size = new System.Drawing.Size(121, 33);
+            namSinhLabel.TabIndex = 10;
+            namSinhLabel.Text = "Năm sinh";
             // 
-            // label4
+            // grThongTin
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 33);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Địa chỉ";
+            this.grThongTin.Controls.Add(maNVLabel);
+            this.grThongTin.Controls.Add(this.maNVSpinEdit);
+            this.grThongTin.Controls.Add(tenNhanVienLabel);
+            this.grThongTin.Controls.Add(this.tenNhanVienTextEdit);
+            this.grThongTin.Controls.Add(gioiTinhLabel);
+            this.grThongTin.Controls.Add(diaChiLabel);
+            this.grThongTin.Controls.Add(this.diaChiTextEdit);
+            this.grThongTin.Controls.Add(this.gioiTinhTextEdit);
+            this.grThongTin.Controls.Add(sDTLabel);
+            this.grThongTin.Controls.Add(this.sDTTextEdit);
+            this.grThongTin.Controls.Add(namSinhLabel);
+            this.grThongTin.Controls.Add(this.namSinhDateEdit);
+            this.grThongTin.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grThongTin.Location = new System.Drawing.Point(12, 97);
+            this.grThongTin.Name = "grThongTin";
+            this.grThongTin.Size = new System.Drawing.Size(1259, 209);
+            this.grThongTin.TabIndex = 0;
+            this.grThongTin.TabStop = false;
+            this.grThongTin.Text = "Thông tin nhân viên";
+            this.grThongTin.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label2
+            // maNVSpinEdit
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(991, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Giới tính";
+            this.maNVSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "MaNV", true));
+            this.maNVSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.maNVSpinEdit.Location = new System.Drawing.Point(162, 47);
+            this.maNVSpinEdit.Name = "maNVSpinEdit";
+            this.maNVSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maNVSpinEdit.Properties.Appearance.Options.UseFont = true;
+            this.maNVSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.maNVSpinEdit.Size = new System.Drawing.Size(150, 38);
+            this.maNVSpinEdit.TabIndex = 1;
             // 
-            // label5
+            // nhanVienBindingSource
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(645, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 33);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Năm sinh";
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.nhanVien;
             // 
-            // txtten
+            // nhanVien
             // 
-            this.txtten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtten.Enabled = false;
-            this.txtten.Location = new System.Drawing.Point(457, 55);
-            this.txtten.Name = "txtten";
-            this.txtten.Size = new System.Drawing.Size(173, 40);
-            this.txtten.TabIndex = 3;
+            this.nhanVien.DataSetName = "NhanVien";
+            this.nhanVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label3
+            // tenNhanVienTextEdit
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 33);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tên nhân viên";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.tenNhanVienTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "TenNhanVien", true));
+            this.tenNhanVienTextEdit.Location = new System.Drawing.Point(553, 47);
+            this.tenNhanVienTextEdit.Name = "tenNhanVienTextEdit";
+            this.tenNhanVienTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenNhanVienTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.tenNhanVienTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.tenNhanVienTextEdit.TabIndex = 2;
             // 
-            // txtma
+            // diaChiTextEdit
             // 
-            this.txtma.Enabled = false;
-            this.txtma.Location = new System.Drawing.Point(181, 58);
-            this.txtma.Name = "txtma";
-            this.txtma.Size = new System.Drawing.Size(79, 40);
-            this.txtma.TabIndex = 2;
+            this.diaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "DiaChi", true));
+            this.diaChiTextEdit.Location = new System.Drawing.Point(553, 107);
+            this.diaChiTextEdit.Name = "diaChiTextEdit";
+            this.diaChiTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaChiTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.diaChiTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.diaChiTextEdit.TabIndex = 5;
             // 
-            // label1
+            // gioiTinhTextEdit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã nhân viên";
+            this.gioiTinhTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "GioiTinh", true));
+            this.gioiTinhTextEdit.Location = new System.Drawing.Point(897, 45);
+            this.gioiTinhTextEdit.Name = "gioiTinhTextEdit";
+            this.gioiTinhTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gioiTinhTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.gioiTinhTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.gioiTinhTextEdit.TabIndex = 3;
+            // 
+            // sDTTextEdit
+            // 
+            this.sDTTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "SDT", true));
+            this.sDTTextEdit.Location = new System.Drawing.Point(162, 101);
+            this.sDTTextEdit.Name = "sDTTextEdit";
+            this.sDTTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sDTTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.sDTTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.sDTTextEdit.TabIndex = 4;
+            // 
+            // namSinhDateEdit
+            // 
+            this.namSinhDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "NamSinh", true));
+            this.namSinhDateEdit.EditValue = null;
+            this.namSinhDateEdit.Location = new System.Drawing.Point(897, 101);
+            this.namSinhDateEdit.Name = "namSinhDateEdit";
+            this.namSinhDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namSinhDateEdit.Properties.Appearance.Options.UseFont = true;
+            this.namSinhDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.namSinhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.namSinhDateEdit.Size = new System.Drawing.Size(150, 38);
+            this.namSinhDateEdit.TabIndex = 6;
             // 
             // btnHuy
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(484, 12);
+            this.btnHuy.Location = new System.Drawing.Point(640, 12);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(152, 49);
             this.btnHuy.TabIndex = 0;
@@ -220,8 +267,17 @@
             // 
             // dgvDanhSachNV
             // 
+            this.dgvDanhSachNV.AutoGenerateColumns = false;
             this.dgvDanhSachNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSachNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNVDataGridViewTextBoxColumn,
+            this.tenNhanVienDataGridViewTextBoxColumn,
+            this.gioiTinhDataGridViewTextBoxColumn,
+            this.diaChiDataGridViewTextBoxColumn,
+            this.sDTDataGridViewTextBoxColumn,
+            this.namSinhDataGridViewTextBoxColumn});
+            this.dgvDanhSachNV.DataSource = this.nhanVienBindingSource;
             this.dgvDanhSachNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachNV.Location = new System.Drawing.Point(3, 36);
             this.dgvDanhSachNV.Name = "dgvDanhSachNV";
@@ -229,6 +285,42 @@
             this.dgvDanhSachNV.Size = new System.Drawing.Size(1253, 150);
             this.dgvDanhSachNV.TabIndex = 0;
             this.dgvDanhSachNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachNV_CellContentClick);
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã NV";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            // 
+            // tenNhanVienDataGridViewTextBoxColumn
+            // 
+            this.tenNhanVienDataGridViewTextBoxColumn.DataPropertyName = "TenNhanVien";
+            this.tenNhanVienDataGridViewTextBoxColumn.HeaderText = "Tên NV";
+            this.tenNhanVienDataGridViewTextBoxColumn.Name = "tenNhanVienDataGridViewTextBoxColumn";
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
+            // 
+            // namSinhDataGridViewTextBoxColumn
+            // 
+            this.namSinhDataGridViewTextBoxColumn.DataPropertyName = "NamSinh";
+            this.namSinhDataGridViewTextBoxColumn.HeaderText = "Năm sinh";
+            this.namSinhDataGridViewTextBoxColumn.Name = "namSinhDataGridViewTextBoxColumn";
             // 
             // btnThem
             // 
@@ -275,14 +367,41 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
+            this.tableAdapterManager.UpdateOrder = QLShopQA.NhanVienTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLuu.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::QLShopQA.Properties.Resources.Save_icon;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(484, 12);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(152, 50);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
+            // 
             // frmNhanVien
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 594);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grThongTin);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnHuy);
@@ -294,8 +413,17 @@
             this.Text = "Quản lý nhân viên";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grThongTin.ResumeLayout(false);
+            this.grThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maNVSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenNhanVienTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gioiTinhTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sDTTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namSinhDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namSinhDateEdit.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachNV)).EndInit();
             this.ResumeLayout(false);
@@ -304,24 +432,29 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grThongTin;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtdiachi;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtten;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtma;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvDanhSachNV;
-        private System.Windows.Forms.ComboBox cmbgioitinh;
-        private System.Windows.Forms.DateTimePicker dtnamsinh;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private NhanVien nhanVien;
+        private System.Windows.Forms.BindingSource nhanVienBindingSource;
+        private NhanVienTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
+        private NhanVienTableAdapters.TableAdapterManager tableAdapterManager;
+        private DevExpress.XtraEditors.SpinEdit maNVSpinEdit;
+        private DevExpress.XtraEditors.TextEdit tenNhanVienTextEdit;
+        private DevExpress.XtraEditors.TextEdit gioiTinhTextEdit;
+        private DevExpress.XtraEditors.TextEdit diaChiTextEdit;
+        private DevExpress.XtraEditors.TextEdit sDTTextEdit;
+        private DevExpress.XtraEditors.DateEdit namSinhDateEdit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhanVienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namSinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

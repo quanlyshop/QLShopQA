@@ -14,11 +14,11 @@ namespace QLShopQA.View
 {
     public partial class frmNhanVien : Form
     {
-        SqlConnection connection;
-        SqlCommand command;
-        string str = @"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True";
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
+        //SqlConnection connection;
+        //SqlCommand command;
+        //string str = @"Data Source=DESKTOP-AB4A8OE;Initial Catalog=QL_ShopQuanAo;Integrated Security=True";
+        //SqlDataAdapter adapter = new SqlDataAdapter();
+        //DataTable table = new DataTable();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -41,9 +41,12 @@ namespace QLShopQA.View
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(str);
-            connection.Open();
-            loadcontrol();
+           //// TODO: This line of code loads data into the 'nhanVien._NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.nhanVien._NhanVien);
+            dis_en(true);
+            //connection = new SqlConnection(str);
+            //connection.Open();
+            //loadcontrol();
         }
         //void bingding()
         //{   
@@ -66,39 +69,30 @@ namespace QLShopQA.View
         //    cmbgioitinh.DataBindings.Add("Text", dgvDanhSachNV.DataSource, "GioiTinh");
            
         //}
-        //void dis_en(bool e)
-        //{
-        //    txtma.Enabled = e;
-        //    txtten.Enabled = e;
-        //    txtdiachi.Enabled = e;
-        //    txtSDT.Enabled = e;
-        //    dtnamsinh.Enabled = e;
-        //    cmbgioitinh.Enabled = e;
-        //    btnLuu.Enabled = e;
-        //    btnHuy.Enabled = e;
-        //    btnThem.Enabled = !e;
-        //    btnSua.Enabled = !e;
-        //    btnXoa.Enabled = !e;
-        //}
+        void dis_en(bool e)
+        {
+            this.btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = e;
+            btnLuu.Enabled = btnHuy.Enabled = grThongTin.Enabled = !e;
+        }
         void loadcontrol()
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select *from NhanVien";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dgvDanhSachNV.DataSource = table;
+            //command = connection.CreateCommand();
+            //command.CommandText = "select *from NhanVien";
+            //adapter.SelectCommand = command;
+            //table.Clear();
+            //adapter.Fill(table);
+            //dgvDanhSachNV.DataSource = table;
         }
         private void dgvDanhSachNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
-            i = dgvDanhSachNV.CurrentRow.Index;
-            txtma.Text = dgvDanhSachNV.Rows[i].Cells[0].Value.ToString();
-            txtten.Text = dgvDanhSachNV.Rows[i].Cells[1].Value.ToString();
-            dtnamsinh.Text = dgvDanhSachNV.Rows[i].Cells[5].Value.ToString();
-            cmbgioitinh.Text = dgvDanhSachNV.Rows[i].Cells[2].Value.ToString();
-            txtdiachi.Text = dgvDanhSachNV.Rows[i].Cells[3].Value.ToString();
-            txtSDT.Text = dgvDanhSachNV.Rows[i].Cells[4].Value.ToString();
+            //int i;
+            //i = dgvDanhSachNV.CurrentRow.Index;
+            //txtma.Text = dgvDanhSachNV.Rows[i].Cells[0].Value.ToString();
+            //txtten.Text = dgvDanhSachNV.Rows[i].Cells[1].Value.ToString();
+            //dtnamsinh.Text = dgvDanhSachNV.Rows[i].Cells[5].Value.ToString();
+            //cmbgioitinh.Text = dgvDanhSachNV.Rows[i].Cells[2].Value.ToString();
+            //txtdiachi.Text = dgvDanhSachNV.Rows[i].Cells[3].Value.ToString();
+            //txtSDT.Text = dgvDanhSachNV.Rows[i].Cells[4].Value.ToString();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,38 +102,50 @@ namespace QLShopQA.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "Insert into tb_NhanVien values ('" + txtma.Text + "', N'" + txtten.Text + "', N'" + cmbgioitinh.Text + "', N'" + txtdiachi.Text + "','" + txtSDT.Text + "','" + dtnamsinh.Text + "',)";
-            command.ExecuteNonQuery();            
-            loadcontrol();
+            dis_en(false);
+            maNVSpinEdit.Focus();
+            this.nhanVienBindingSource.AddNew();
+            this.tableAdapterManager.UpdateAll(this.nhanVien);
+            XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //command = connection.CreateCommand();
+            //command.CommandText = "Insert into tb_NhanVien values ('" + txtma.Text + "', N'" + txtten.Text + "', N'" + cmbgioitinh.Text + "', N'" + txtdiachi.Text + "','" + txtSDT.Text + "','" + dtnamsinh.Text + "',)";
+            //command.ExecuteNonQuery();            
+            //loadcontrol();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "UPDATE NhanVien set TenNV = N'" + txtten.Text + "',GioiTinh = N'" + cmbgioitinh.Text + "',DiaChi = N'" + txtdiachi.Text + "',SDT = '" + txtSDT.Text + "',NamSinh = '" + dtnamsinh.Text + "'";
-            command.ExecuteNonQuery();
-            loadcontrol();
+            dis_en(false);
+            maNVSpinEdit.Focus();
+            //command = connection.CreateCommand();
+            //command.CommandText = "UPDATE NhanVien set TenNV = N'" + txtten.Text + "',GioiTinh = N'" + cmbgioitinh.Text + "',DiaChi = N'" + txtdiachi.Text + "',SDT = '" + txtSDT.Text + "',NamSinh = '" + dtnamsinh.Text + "'";
+            //command.ExecuteNonQuery();
+            //loadcontrol();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            //command = connection.CreateCommand();
-            //command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
-            //command.ExecuteNonQuery();
-            //loadcontrol();
-            DialogResult dr = XtraMessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn xóa thông tin ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                command = connection.CreateCommand();
-                command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
-                command.ExecuteNonQuery();
-                loadcontrol();
-                XtraMessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.nhanVienBindingSource.RemoveCurrent();
+                this.tableAdapterManager.UpdateAll(this.nhanVien);
             }
-            else
-                return;
-            frmNhanVien_Load(sender, e);
+            ////command = connection.CreateCommand();
+            ////command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
+            ////command.ExecuteNonQuery();
+            ////loadcontrol();
+            //DialogResult dr = XtraMessageBox.Show("Bạn có muốn xóa ?", " Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dr == DialogResult.Yes)
+            //{
+            //    command = connection.CreateCommand();
+            //    command.CommandText = "DELETE from NhanVien where MaNV='" + txtma.Text + "'";
+            //    command.ExecuteNonQuery();
+            //    loadcontrol();
+            //    XtraMessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //    return;
+            //frmNhanVien_Load(sender, e);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -165,19 +171,30 @@ namespace QLShopQA.View
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtma.Text = "";
-            txtten.Text = "";
-            txtSDT.Text = "";
-            cmbgioitinh.Text = "";
-            txtdiachi.Text = "";         
-            dtnamsinh.Text = "1/1/1999";         
-            //frmNhanVien_Load(sender, e);
-            //dis_en(false);
+            this.nhanVienBindingSource.CancelEdit();
+            dis_en(true);
+            //txtma.Text = "";
+            //txtten.Text = "";
+            //txtSDT.Text = "";
+            //cmbgioitinh.Text = "";
+            //txtdiachi.Text = "";         
+            //dtnamsinh.Text = "1/1/1999";         
+            ////frmNhanVien_Load(sender, e);
+            ////dis_en(false);
         }
 
         private void cmbgioitinh_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.nhanVienBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nhanVien);
+            dis_en(true);
+            XtraMessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK);
         }
     }
 }
