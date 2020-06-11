@@ -91,7 +91,7 @@
             // tenNhanVienLabel
             // 
             tenNhanVienLabel.AutoSize = true;
-            tenNhanVienLabel.Location = new System.Drawing.Point(365, 42);
+            tenNhanVienLabel.Location = new System.Drawing.Point(342, 49);
             tenNhanVienLabel.Name = "tenNhanVienLabel";
             tenNhanVienLabel.Size = new System.Drawing.Size(171, 33);
             tenNhanVienLabel.TabIndex = 2;
@@ -109,11 +109,12 @@
             // diaChiLabel
             // 
             diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(440, 112);
+            diaChiLabel.Location = new System.Drawing.Point(342, 111);
             diaChiLabel.Name = "diaChiLabel";
             diaChiLabel.Size = new System.Drawing.Size(96, 33);
             diaChiLabel.TabIndex = 6;
             diaChiLabel.Text = "Địa chỉ";
+            diaChiLabel.Click += new System.EventHandler(this.diaChiLabel_Click);
             // 
             // sDTLabel
             // 
@@ -186,21 +187,21 @@
             // tenNhanVienTextEdit
             // 
             this.tenNhanVienTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "TenNhanVien", true));
-            this.tenNhanVienTextEdit.Location = new System.Drawing.Point(553, 47);
+            this.tenNhanVienTextEdit.Location = new System.Drawing.Point(531, 47);
             this.tenNhanVienTextEdit.Name = "tenNhanVienTextEdit";
             this.tenNhanVienTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenNhanVienTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tenNhanVienTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.tenNhanVienTextEdit.Size = new System.Drawing.Size(206, 38);
             this.tenNhanVienTextEdit.TabIndex = 2;
             // 
             // diaChiTextEdit
             // 
             this.diaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "DiaChi", true));
-            this.diaChiTextEdit.Location = new System.Drawing.Point(553, 107);
+            this.diaChiTextEdit.Location = new System.Drawing.Point(444, 108);
             this.diaChiTextEdit.Name = "diaChiTextEdit";
             this.diaChiTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diaChiTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.diaChiTextEdit.Size = new System.Drawing.Size(150, 38);
+            this.diaChiTextEdit.Size = new System.Drawing.Size(293, 38);
             this.diaChiTextEdit.TabIndex = 5;
             // 
             // gioiTinhTextEdit

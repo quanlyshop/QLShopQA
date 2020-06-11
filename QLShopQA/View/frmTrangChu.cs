@@ -21,12 +21,14 @@ namespace QLShopQA.View
             InitializeComponent();
             //DisEndMenuLogin(true,idLogin);
         }
-        public void DisEndMenuLogin(bool e,string _idLogin)
+        public void DisEndMenuLogin(bool e)
         {
-            btnDSNhanVien.Enabled = !e;
-            btnDangNhap.Enabled = e;
-            btnLogout.Enabled = !e;
-            btnPhanQuyen.Enabled = !e;
+            btnDSNhanVien.Enabled= btnDSKhachHang.Enabled = btnPhanQuyen.Enabled = btnRegister.Enabled =e;
+            btnDangNhap.Enabled =!e;
+            //btnLogout.Enabled = !e;
+            //btnPhanQuyen.Enabled = !e;
+            //btnRegister.Enabled = !e;
+            //btnDSKhachHang.Enabled = !e;
         }
 
         private void frmTrangChu_Load(object sender, EventArgs e)
@@ -49,7 +51,17 @@ namespace QLShopQA.View
             }
             return null;
         }
-
+        public void get_permission(int per)
+        {
+            if (per == 1)
+            {
+                DisEndMenuLogin(true);
+                btnLogout.Enabled = true;
+            }
+            else
+                DisEndMenuLogin(false);
+                btnLogout.Enabled = true;
+        }
         private void btnDSNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTraTonTai(typeof(frmNhanVien));
@@ -64,7 +76,7 @@ namespace QLShopQA.View
                 f.Show();
             }
         }
-
+        
         private void btnDangNhap_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTraTonTai(typeof(frmLogin));
@@ -89,11 +101,26 @@ namespace QLShopQA.View
 
         private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //if (MessageBox.Show("Bạn có muốn đăng xuất !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
-            //{
-            //    DisEndMenuLogin(true, idLogin);
-            //    btnDangNhap_ItemClick(sender, e);
-            //}
+            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn đăng xuất !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
+            {
+                DisEndMenuLogin(true);
+                btnDangNhap_ItemClick(sender, e);
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmKhachHang));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmKhachHang f = new frmKhachHang();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }

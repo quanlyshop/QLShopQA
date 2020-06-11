@@ -140,7 +140,7 @@
             // 
             this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(111, 210);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(111, 195);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(73, 24);
             this.hyperlinkLabelControl1.TabIndex = 6;

@@ -26,10 +26,12 @@ namespace QLShopQA.View
         {
 
         }
-
+        public delegate void CheckpPermission(int per);
+        CheckpPermission chk;
+        frmTrangChu frm;
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-          
             conn = new SqlConnection(strcConnection);
             conn.Open();
             string sql= "Select Count(*) from account where usename = '" + txtAccount.Text + "' and pass = '" + txtPassword.Text + "'";
@@ -37,10 +39,18 @@ namespace QLShopQA.View
             int x = (int)command.ExecuteScalar();
             if (x == 1)
             {
+                frmTrangChu frm = new frmTrangChu();
+                chk = new CheckpPermission(frm.get_permission);
                 //MessageBox.Show("Đăng nhập thành công", "Đăng nhập");
-                frmTrangChu f = new frmTrangChu();
+                //frmTrangChu f = new frmTrangChu();
+                if (txtAccount.Text == "admin")
+                {
+                    chk(1);
+                }
+                else
+                    chk(0);
                 this.Hide();
-                f.ShowDialog();//Đợi cho showdialog tắt đi mới chạy tiếp
+                frm.ShowDialog();//Đợi cho showdialog tắt đi mới chạy tiếp
                 this.Show();
             }
             else

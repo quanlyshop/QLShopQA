@@ -196,5 +196,10 @@ namespace QLShopQA.View
             dis_en(true);
             XtraMessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK);
         }
+
+        private void diaChiLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
