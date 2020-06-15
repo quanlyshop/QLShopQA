@@ -23,7 +23,7 @@ namespace QLShopQA.View
         }
         public void DisEndMenuLogin(bool e)
         {
-            btnDSNhanVien.Enabled= btnDSKhachHang.Enabled = btnPhanQuyen.Enabled = btnRegister.Enabled =e;
+            btnDSNhanVien.Enabled= btnDSKhachHang.Enabled = btnStore.Enabled = btnRegister.Enabled =e;
             btnDangNhap.Enabled =!e;
             //btnLogout.Enabled = !e;
             //btnPhanQuyen.Enabled = !e;

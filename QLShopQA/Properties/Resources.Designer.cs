@@ -93,6 +93,26 @@ namespace QLShopQA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner11 {
+            get {
+                object obj = ResourceManager.GetObject("banner11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Buy_icon {
+            get {
+                object obj = ResourceManager.GetObject("Buy-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_2_icon {
             get {
                 object obj = ResourceManager.GetObject("Close-2-icon", resourceCulture);
@@ -113,6 +133,46 @@ namespace QLShopQA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JacketTreetgang {
+            get {
+                object obj = ResourceManager.GetObject("JacketTreetgang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninjaStreetgang {
+            get {
+                object obj = ResourceManager.GetObject("ninjaStreetgang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Printer_icon {
+            get {
+                object obj = ResourceManager.GetObject("Printer-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_As_icon {
+            get {
+                object obj = ResourceManager.GetObject("Save-As-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_icon {
             get {
                 object obj = ResourceManager.GetObject("Save-icon", resourceCulture);
@@ -126,6 +186,96 @@ namespace QLShopQA.Properties {
         internal static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShirtMeoStreetgang {
+            get {
+                object obj = ResourceManager.GetObject("ShirtMeoStreetgang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Short_Pants_icon {
+            get {
+                object obj = ResourceManager.GetObject("Short-Pants-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap T_Shirt_icon {
+            get {
+                object obj = ResourceManager.GetObject("T-Shirt-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TeedenDergey {
+            get {
+                object obj = ResourceManager.GetObject("TeedenDergey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TeeDergey {
+            get {
+                object obj = ResourceManager.GetObject("TeeDergey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teeStreetgang {
+            get {
+                object obj = ResourceManager.GetObject("teeStreetgang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TvangDergey {
+            get {
+                object obj = ResourceManager.GetObject("TvangDergey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Very_Basic_Search_icon {
+            get {
+                object obj = ResourceManager.GetObject("Very-Basic-Search-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

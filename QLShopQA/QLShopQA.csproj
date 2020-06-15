@@ -193,5 +193,50 @@
   <ItemGroup>
     <None Include="Resources\search-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Short-Pants-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T-Shirt-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Very-Basic-Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-As-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teeStreetgang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninjaStreetgang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShirtMeoStreetgang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JacketTreetgang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TvangDergey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeeDergey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeedenDergey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buy-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

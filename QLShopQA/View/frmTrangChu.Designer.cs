@@ -37,7 +37,7 @@
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.btnDSKhachHang = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPhanQuyen = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStore = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -64,7 +64,7 @@
             this.barSubItem1,
             this.barButtonGroup1,
             this.btnDSKhachHang,
-            this.btnPhanQuyen,
+            this.btnStore,
             this.btnLogout,
             this.skinRibbonGalleryBarItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
@@ -90,7 +90,7 @@
             // 
             this.btnRegister.Caption = "Đăng ký";
             this.btnRegister.Id = 2;
-            this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRegister.ImageOptions.SvgImage")));
             this.btnRegister.Name = "btnRegister";
             // 
             // btnDSNhanVien
@@ -117,16 +117,16 @@
             // 
             this.btnDSKhachHang.Caption = "Quản lý khách hàng";
             this.btnDSKhachHang.Id = 6;
-            this.btnDSKhachHang.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnDSKhachHang.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDSKhachHang.ImageOptions.SvgImage")));
             this.btnDSKhachHang.Name = "btnDSKhachHang";
             this.btnDSKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
-            // btnPhanQuyen
+            // btnStore
             // 
-            this.btnPhanQuyen.Caption = "Phân quyền";
-            this.btnPhanQuyen.Id = 7;
-            this.btnPhanQuyen.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPhanQuyen.ImageOptions.SvgImage")));
-            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnStore.Caption = "Store";
+            this.btnStore.Id = 7;
+            this.btnStore.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPhanQuyen.ImageOptions.SvgImage")));
+            this.btnStore.Name = "btnStore";
             // 
             // btnLogout
             // 
@@ -148,12 +148,12 @@
             this.ribbonPageGroup1,
             this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Admin";
+            this.ribbonPage1.Text = "Hệ thống";
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnStore);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnRegister);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnPhanQuyen);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnLogout);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hệ thống";
@@ -231,7 +231,7 @@
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
         private DevExpress.XtraBars.BarButtonItem btnDSKhachHang;
-        private DevExpress.XtraBars.BarButtonItem btnPhanQuyen;
+        private DevExpress.XtraBars.BarButtonItem btnStore;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
