@@ -24,7 +24,7 @@ namespace QLShopQA.View
         public void DisEndMenuLogin(bool e)
         {
             btnDSNhanVien.Enabled= btnDSKhachHang.Enabled = btnStore.Enabled = btnRegister.Enabled =e;
-            btnDangNhap.Enabled =!e;
+            btnDangNhap.Enabled =btnStore.Enabled =!e;
             //btnLogout.Enabled = !e;
             //btnPhanQuyen.Enabled = !e;
             //btnRegister.Enabled = !e;
@@ -103,7 +103,11 @@ namespace QLShopQA.View
         {
             if (DialogResult.Yes == MessageBox.Show("Bạn có muốn đăng xuất !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
             {
-                DisEndMenuLogin(true);
+                //frmLogin f = new frmLogin();
+                //f.Hide();
+                //f.ShowDialog();
+                DisEndMenuLogin(false);
+                btnStore.Enabled = false;
                 btnDangNhap_ItemClick(sender, e);
             }
         }
@@ -121,6 +125,26 @@ namespace QLShopQA.View
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void btnStore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmMain f = new frmMain();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmquanlykho f = new frmquanlykho();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btnRegister_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmRegister f = new frmRegister();
+            f.ShowDialog();
         }
     }
 }

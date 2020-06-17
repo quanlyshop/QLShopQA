@@ -29,8 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -54,55 +64,49 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -134,10 +138,6 @@
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,26 +157,137 @@
             this.panel1.Size = new System.Drawing.Size(319, 657);
             this.panel1.TabIndex = 0;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(176, 433);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(105, 55);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "700";
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel24);
             this.flowLayoutPanel1.Controls.Add(this.panel25);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(291, 325);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(283, 325);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.label16);
+            this.panel24.Controls.Add(this.pictureBox9);
+            this.panel24.Controls.Add(this.label15);
+            this.panel24.Location = new System.Drawing.Point(3, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(268, 56);
+            this.panel24.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(212, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 22);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "350";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox9.Image = global::QLShopQA.Properties.Resources.ShirtMeoStreetgang;
+            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(65, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(86, 22);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Shirt Meo";
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.label20);
+            this.panel25.Controls.Add(this.pictureBox10);
+            this.panel25.Controls.Add(this.label18);
+            this.panel25.Location = new System.Drawing.Point(3, 65);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(268, 56);
+            this.panel25.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(212, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 22);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "350";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox10.Image = global::QLShopQA.Properties.Resources.TeedenDergey;
+            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(65, 10);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(80, 22);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Tee Đen";
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DarkOrange;
             this.button4.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(186, 517);
+            this.button4.Location = new System.Drawing.Point(160, 517);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 44);
             this.button4.TabIndex = 0;
             this.button4.Text = "Thanh toán";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(34, 459);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 22);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Tổng cộng";
             // 
             // button5
             // 
@@ -184,7 +295,7 @@
             this.button5.BackgroundImage = global::QLShopQA.Properties.Resources.Printer_icon;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button5.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(98, 517);
+            this.button5.Location = new System.Drawing.Point(88, 517);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(51, 44);
             this.button5.TabIndex = 0;
@@ -206,7 +317,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.DarkOrange;
             this.button2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(186, 37);
+            this.button2.Location = new System.Drawing.Point(166, 37);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 44);
             this.button2.TabIndex = 0;
@@ -234,7 +345,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Location = new System.Drawing.Point(12, 85);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1030, 50);
+            this.panel2.Size = new System.Drawing.Size(1030, 79);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -261,14 +372,16 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button8.FlatAppearance.BorderSize = 3;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkOrange;
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepPink;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(234, 6);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(91, 38);
+            this.button8.Size = new System.Drawing.Size(120, 61);
             this.button8.TabIndex = 0;
             this.button8.Text = "Hoodie";
             this.button8.UseVisualStyleBackColor = false;
@@ -276,14 +389,16 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button7.FlatAppearance.BorderSize = 3;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkOrange;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepPink;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(126, 6);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(91, 38);
+            this.button7.Size = new System.Drawing.Size(91, 61);
             this.button7.TabIndex = 0;
             this.button7.Text = "Quần";
             this.button7.UseVisualStyleBackColor = false;
@@ -291,14 +406,16 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button6.FlatAppearance.BorderSize = 3;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkOrange;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepPink;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(19, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 38);
+            this.button6.Size = new System.Drawing.Size(91, 61);
             this.button6.TabIndex = 0;
             this.button6.Text = "Áo";
             this.button6.UseVisualStyleBackColor = false;
@@ -448,6 +565,17 @@
             this.panel11.Size = new System.Drawing.Size(195, 224);
             this.panel11.TabIndex = 0;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.DarkOrange;
+            this.button10.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.Location = new System.Drawing.Point(3, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(40, 39);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = global::QLShopQA.Properties.Resources.ninjaStreetgang;
@@ -512,6 +640,17 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(195, 224);
             this.panel14.TabIndex = 0;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DarkOrange;
+            this.button11.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.Location = new System.Drawing.Point(3, 3);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(40, 39);
+            this.button11.TabIndex = 1;
+            this.button11.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
@@ -578,6 +717,17 @@
             this.panel17.Size = new System.Drawing.Size(195, 224);
             this.panel17.TabIndex = 0;
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.DarkOrange;
+            this.button12.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.Location = new System.Drawing.Point(3, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(40, 39);
+            this.button12.TabIndex = 1;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = global::QLShopQA.Properties.Resources.JacketTreetgang;
@@ -642,6 +792,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(195, 224);
             this.panel3.TabIndex = 0;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.DarkOrange;
+            this.button13.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Location = new System.Drawing.Point(3, 3);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(40, 39);
+            this.button13.TabIndex = 1;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -708,6 +869,17 @@
             this.panel20.Size = new System.Drawing.Size(195, 224);
             this.panel20.TabIndex = 0;
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.DarkOrange;
+            this.button15.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Location = new System.Drawing.Point(3, 3);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(40, 39);
+            this.button15.TabIndex = 1;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImage = global::QLShopQA.Properties.Resources.TeeDergey;
@@ -773,61 +945,6 @@
             this.panel23.Size = new System.Drawing.Size(195, 224);
             this.panel23.TabIndex = 0;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::QLShopQA.Properties.Resources.TeedenDergey;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(195, 224);
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkOrange;
-            this.button10.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Location = new System.Drawing.Point(3, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 39);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DarkOrange;
-            this.button11.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Location = new System.Drawing.Point(3, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 39);
-            this.button11.TabIndex = 1;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.DarkOrange;
-            this.button12.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.Location = new System.Drawing.Point(3, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(40, 39);
-            this.button12.TabIndex = 1;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.DarkOrange;
-            this.button13.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Location = new System.Drawing.Point(3, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(40, 39);
-            this.button13.TabIndex = 1;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.DarkOrange;
@@ -839,126 +956,16 @@
             this.button14.TabIndex = 1;
             this.button14.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // pictureBox8
             // 
-            this.button15.BackColor = System.Drawing.Color.DarkOrange;
-            this.button15.BackgroundImage = global::QLShopQA.Properties.Resources.Buy_icon;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.Location = new System.Drawing.Point(3, 3);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(40, 39);
-            this.button15.TabIndex = 1;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.label16);
-            this.panel24.Controls.Add(this.pictureBox9);
-            this.panel24.Controls.Add(this.label15);
-            this.panel24.Location = new System.Drawing.Point(3, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(280, 56);
-            this.panel24.TabIndex = 0;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox9.Image = global::QLShopQA.Properties.Resources.ShirtMeoStreetgang;
-            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(56, 46);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(65, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 22);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Shirt Meo";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(228, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 22);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "350";
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.label20);
-            this.panel25.Controls.Add(this.pictureBox10);
-            this.panel25.Controls.Add(this.label18);
-            this.panel25.Location = new System.Drawing.Point(3, 65);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(280, 56);
-            this.panel25.TabIndex = 0;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(202, 433);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(105, 55);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "750";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox10.Image = global::QLShopQA.Properties.Resources.TeedenDergey;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(65, 10);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 22);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Tee Đen";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(34, 459);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 22);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Tổng cộng";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(228, 12);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 22);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "350";
+            this.pictureBox8.BackgroundImage = global::QLShopQA.Properties.Resources.TeedenDergey;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(195, 224);
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
             // 
             // frmMain
             // 
@@ -979,6 +986,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1018,12 +1031,6 @@
             this.panel22.PerformLayout();
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
